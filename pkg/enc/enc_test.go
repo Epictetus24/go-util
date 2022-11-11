@@ -53,7 +53,7 @@ func TestRSASig(t *testing.T) {
 
 }
 
-func RC4E2E(t *testing.T) {
+func TestRC4E2E(t *testing.T) {
 
 	want := []byte("Super secret message with stuff that you wouldn't want on your facebook feed.")
 	key := []byte("password123")
@@ -75,7 +75,7 @@ func RC4E2E(t *testing.T) {
 
 }
 
-func AESE2E(t *testing.T) {
+func TestAESE2E(t *testing.T) {
 
 	want := []byte("Your browsing history")
 	key := []byte("spring2020")
