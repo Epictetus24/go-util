@@ -53,39 +53,17 @@ func TestRSASig(t *testing.T) {
 
 }
 
-func TestRC4E2E(t *testing.T) {
-
-	want := []byte("Super secret message with stuff that you wouldn't want on your facebook feed.")
-	key := []byte("password123")
-
-	encrypted, err := RC4Encrypt(key, want)
-	if err != nil {
-		t.Errorf("got %q, wanted nil", err)
-	}
-
-	got, err := RC4Decrypt(key, encrypted)
-	if err != nil {
-		t.Errorf("got %q, wanted nil", err)
-	}
-
-	if string(got) != string(want) {
-		t.Errorf("got %q, wanted %s", got, want)
-
-	}
-
-}
-
-func TestAESE2E(t *testing.T) {
+func TestAESCBCE2E(t *testing.T) {
 
 	want := []byte("Your browsing history")
-	key := []byte("spring2020")
+	key := []byte("passphrasewhichneedstobe32bytes!")
 
-	encrypted, err := AESEncrypt(key, want)
+	encrypted, err := AESCBCEncrypt(key, want)
 	if err != nil {
 		t.Errorf("got %q, wanted nil", err)
 	}
 
-	got, err := AESDecrypt(key, encrypted)
+	got, err := AESCBCDecrypt(key, encrypted)
 	if err != nil {
 		t.Errorf("got %q, wanted nil", err)
 	}

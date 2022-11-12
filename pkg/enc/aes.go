@@ -21,7 +21,7 @@ func PKCS5Trimming(encrypt []byte) []byte {
 }
 
 // Encrypt and Decrypt
-func AESEncrypt(key, plainbytes []byte) ([]byte, error) {
+func AESCBCEncrypt(key, plainbytes []byte) ([]byte, error) {
 
 	if len(plainbytes)%aes.BlockSize != 0 {
 		plainbytes = PKCS5Padding(plainbytes, aes.BlockSize)
@@ -48,7 +48,7 @@ func AESEncrypt(key, plainbytes []byte) ([]byte, error) {
 	return cipherbytes, nil
 }
 
-func AESDecrypt(encKey, encBuf []byte) ([]byte, error) {
+func AESCBCDecrypt(encKey, encBuf []byte) ([]byte, error) {
 
 	var block cipher.Block
 
