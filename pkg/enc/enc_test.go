@@ -53,7 +53,7 @@ func TestRSASig(t *testing.T) {
 
 }
 
-func TestAESCBCE2E(t *testing.T) {
+func TestAESCBC(t *testing.T) {
 
 	want := []byte("Your browsing history")
 	key := []byte("passphrasewhichneedstobe32bytes!")
@@ -64,6 +64,30 @@ func TestAESCBCE2E(t *testing.T) {
 	}
 
 	got, err := AESCBCDecrypt(key, encrypted)
+	if err != nil {
+		t.Errorf("got %q, wanted nil", err)
+	}
+
+	if string(got) != string(want) {
+		t.Errorf("got %q, wanted %s", got, want)
+
+	}
+
+}
+
+func TestAESGCMID(t *testing.T) {
+
+	want := []byte("Your browsing history")
+	key := []byte("passphrasewhichneedstobe32bytes!")
+	senderid := []byte("d")
+	senderidlen := len(senderid)
+
+	encrypted, err := AESGCMEncID(key, want, senderid)
+	if err != nil {
+		t.Errorf("got %q, wanted nil", err)
+	}
+
+	got, err := AESGCMDecID(key, encrypted, senderidlen)
 	if err != nil {
 		t.Errorf("got %q, wanted nil", err)
 	}
