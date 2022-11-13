@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/salukikit/util/pkg/utc"
+	"github.com/salukikit/util/utc"
 )
 
 func main() {

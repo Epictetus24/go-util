@@ -14,3 +14,9 @@ func Now() string {
 
 	return time
 }
+
+func Stamp2String(timeStamp time.Time) string {
+
+	return timeStamp.UTC().Format(utcformat)
+
+}
