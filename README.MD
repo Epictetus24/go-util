@@ -1,4 +1,7 @@
-# utils
+# go-util
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/salukikit/go-util)](https://goreportcard.com/report/github.com/salukikit/go-util)
+[![Go Reference](https://pkg.go.dev/badge/github.com/salukikit/go-util.svg)](https://pkg.go.dev/github.com/salukikit/go-util)
 
 Simple Utils that are useful for C2 frameworks and various hacker tools.
 ---
