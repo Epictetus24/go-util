@@ -1,6 +1,6 @@
 package box
 
-const DomKey = `func ChkDom() {
+func ChkDom() {
 	var hope []byte
 
 	hope = {{.Domain}}
@@ -11,4 +11,4 @@ const DomKey = `func ChkDom() {
 		os.Exit(0)
 	}
 
-}`
+}
