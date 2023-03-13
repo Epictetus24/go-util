@@ -1,4 +1,4 @@
-module github.com/salukikit/go-util
+module github.com/epictetus24/go-util
 
 go 1.19
 

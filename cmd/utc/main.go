@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/salukikit/go-util/pkg/utc"
+	"github.com/epictetus24/go-util/pkg/utc"
 )
 
 func main() {
