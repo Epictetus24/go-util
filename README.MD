@@ -1,7 +1,7 @@
 # go-util
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/epictetus24/go-util)](https://goreportcard.com/report/github.com/epictetus24/go-util)
-[![Go Reference](https://pkg.go.dev/badge/github.com/epictetus24/go-util.svg)](https://pkg.go.dev/github.com/epictetus24/go-util)
+[![Go Report Card](https://goreportcard.com/badge/github.com/kopp0ut/go-util)](https://goreportcard.com/report/github.com/kopp0ut/go-util)
+[![Go Reference](https://pkg.go.dev/badge/github.com/kopp0ut/go-util.svg)](https://pkg.go.dev/github.com/kopp0ut/go-util)
 
 Simple Utils that are useful for C2 frameworks and various hacker tools.
 ---
